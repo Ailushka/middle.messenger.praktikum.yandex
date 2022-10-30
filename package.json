@@ -1,12 +1,11 @@
 {
-  "name": "middle.messenger.praktikum.yandex",
+  "name": "chatApp",
   "version": "1.0.0",
   "description": "---",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel src/pages/index.hbs --no-cache",
     "build": "parcel build src/pages/index.hbs",
-    "start": "parcel build src/pages/index.hbs && node ./app.js"
+    "start": "parcel build src/pages/index.hbs && node ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,7 +28,7 @@
     "express": "^4.18.2"
   },
   "engines": {
-    "npm" : ">=8.0.0 <9.0.0",
-    "node" : ">=12.0.0 <17.0.0"
+    "npm": ">=8.0.0 <9.0.0",
+    "node": ">=12.0.0 <17.0.0"
   }
 }
