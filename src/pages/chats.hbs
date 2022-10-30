@@ -1,0 +1,32 @@
+---
+title: Список чатов и лента переписки
+---
+
+{{!< base}}
+
+<section class="chats">
+  <section class="chats__list">Список чатов</section>
+
+  <section class="chats__content">
+    <form class="form form_type_chat">
+      {{> "input/input"
+        class="form__input form__input_type_chat"
+        type="text"
+        aria-label="Ваше сообщение"
+        name="message"
+        id="message"
+        placeholder="Сообщение"
+        required=true
+      }}
+      {{> "button/button" class="button button_type_submit button_type_chat" type="submit" aria-label="Отправить сообщение" text="" }}
+    </form>
+  </section>
+
+</section>
+
+<template id="message-template">
+  <div class="chat-message" tabindex="0">
+    <p class="chat-message-text"></p>
+    <p class="chat-message-time"></p>
+  </div>
+</template>

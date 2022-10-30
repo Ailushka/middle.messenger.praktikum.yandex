@@ -1,0 +1,104 @@
+---
+title: Профиль
+---
+
+{{!< base}}
+
+<section class="profile">
+  <div class="profile__overlay">
+    <img class="profile__avatar" src="../assets/images/avatar.svg" alt="Аватар пользователя" />
+  </div>
+  <h2 class="profile__title">Иван</h2>
+  <form class="form form_type_profile">
+    <fieldset class="form__container">
+      <ul class="form__content list" role="none">
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="email" text="Почта" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="email"
+            name="email"
+            value="pochta@yandex.ru"
+            id="email"
+            placeholder=""
+            disabled=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="login" text="Логин" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="login"
+            value="ivanivanov"
+            id="login"
+            placeholder=""
+            disabled=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="first_name" text="Имя" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="first_name"
+            value="Иван"
+            id="first_name"
+            placeholder=""
+            disabled=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="second_name" text="Фамилия" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="second_name"
+            value="Иванов"
+            id="second_name"
+            placeholder=""
+            disabled=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="display_name" text="Имя в чате" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="display_name"
+            value="Иван"
+            id="display_name"
+            placeholder=""
+            disabled=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="phone" text="Телефон" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="tel"
+            name="phone"
+            value="+7 (909) 967 30 30"
+            id="phone"
+            placeholder=""
+            disabled=true
+          }}
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+  <ul class="profile__controls list">
+    <li class="profile__controls-list">
+      {{> "link/link" class="profile__link" href="./edit-user-info.hbs" text="Изменить данные" }}
+    </li>
+    <li class="profile__controls-list">
+      {{> "link/link" class="profile__link" href="./edit-user-password.hbs" text="Изменить пароль" }}
+    </li>
+    <li class="profile__controls-list">
+      {{> "link/link" class="profile__link profile__link_type_logout" href="./login.hbs" text="Выйти" }}
+    </li>
+    <li class="profile__controls-list">
+      {{> "link/link" class="profile__link profile__link_type_back" href="./chats.hbs" aria-label="Вернуться назад" text="" }}
+    </li>
+  </ul>
+</section>

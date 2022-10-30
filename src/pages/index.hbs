@@ -1,0 +1,35 @@
+---
+title: Навигация по приложению
+---
+
+{{!< base}}
+
+<nav class="nav">
+
+  <ul class="nav__list list">
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./login.hbs" text="Войти" }}
+    </li>
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./register.hbs" text="Зарегистрироваться" }}
+    </li>
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./profile.hbs" text="Профиль" }}
+    </li>
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./edit-user-info.hbs" text="Изменить данные" }}
+    </li>
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./edit-user-password.hbs" text="Изменить пароль" }}
+    </li>
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./chats.hbs" text="Чаты" }}
+    </li>
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./not-found-page.hbs" text="Страница не найдена" }}
+    </li>
+    <li class="nav__item">
+      {{> "link/link" class="nav__link" href="./error-page.hbs" text="Ошибка на странице" }}
+    </li>
+  </ul>
+</nav>
