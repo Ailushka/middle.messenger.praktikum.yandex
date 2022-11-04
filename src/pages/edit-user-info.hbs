@@ -1,0 +1,91 @@
+---
+title: Изменение данных профиля
+---
+
+{{!< base}}
+
+<section class="profile">
+  <div class="profile__overlay">
+    <img class="profile__avatar" src="../assets/images/avatar.svg" alt="Аватар пользователя" />
+  </div>
+  <h2 class="profile__title"></h2>
+  <form class="form form_type_profile">
+    <fieldset class="form__container">
+      <ul class="form__content list" role="none">
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="email" text="Почта" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="email"
+            name="email"
+            value="pochta@yandex.ru"
+            id="email"
+            placeholder=""
+            required=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="login" text="Логин" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="login"
+            value="ivanivanov"
+            id="login"
+            placeholder=""
+            required=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="first_name" text="Имя" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="first_name"
+            value="Иван"
+            id="first_name"
+            placeholder=""
+            required=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="second_name" text="Фамилия" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="second_name"
+            value="Иванов"
+            id="second_name"
+            placeholder=""
+            required=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="display_name" text="Имя в чате" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="text"
+            name="display_name"
+            value="Иван"
+            id="display_name"
+            placeholder=""
+            required=true
+          }}
+        </li>
+        <li class="form__item form__item_type_profile">
+          {{> "label/label" class="form__label form__label_type_profile" for="phone" text="Телефон" }}
+          {{> "input/input"
+            class="form__input form__input_type_profile"
+            type="tel"
+            name="phone"
+            value="+7 (909) 967 30 30"
+            id="phone"
+            placeholder=""
+            required=true
+          }}
+        </li>
+      </ul>
+    </fieldset>
+    {{> "button/button" class="button button_type_save button_enabled" text="Сохранить" }}
+  </form>
+</section>

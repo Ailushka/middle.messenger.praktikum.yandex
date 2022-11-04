@@ -1,0 +1,104 @@
+---
+title: Страница регистрации
+---
+
+{{!< base}}
+
+<section class="form-section register">
+  <h2 class="form-section__title">Регистрация</h2>
+  <form class="form form_type_register">
+    <fieldset class="form__container">
+      <ul class="form__content list" role="none">
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="email" text="Почта" }}
+          {{> "input/input"
+            class="form__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Почта"
+            required=true
+          }}
+          <span class="form__input-error" id="email-error"></span>
+        </li>
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="login" text="Логин" }}
+          {{> "input/input"
+            class="form__input"
+            type="text"
+            name="login"
+            id="login"
+            placeholder="Логин"
+            required=true
+          }}
+          <span class="form__input-error" id="login-error"></span>
+        </li>
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="first_name" text="Имя" }}
+          {{> "input/input"
+            class="form__input"
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="Имя"
+            required=true
+          }}
+          <span class="form__input-error" id="first_name-error"></span>
+        </li>
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="second_name" text="Фамилия" }}
+          {{> "input/input"
+            class="form__input"
+            type="text"
+            name="second_name"
+            id="second_name"
+            placeholder="Фамилия"
+            required=true
+          }}
+          <span class="form__input-error" id="second_name-error"></span>
+        </li>
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="phone" text="Телефон" }}
+          {{> "input/input"
+            class="form__input"
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Телефон"
+            required=true
+          }}
+          <span class="form__input-error" id="phone-error"></span>
+        </li>
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="password" text="Пароль" }}
+          {{> "input/input"
+            class="form__input"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Пароль"
+            required=true
+          }}
+          <span class="form__input-error" id="password-error"></span>
+        </li>
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="repeat-password" text="Пароль (ещё раз)" }}
+          {{> "input/input"
+            class="form__input"
+            type="password"
+            name="repeat-password"
+            id="repeat-password"
+            placeholder="Пароль"
+            required=true
+          }}
+          <span class="form__input-error" id="repeat-password-error"></span>
+        </li>
+      </ul>
+    </fieldset>
+    {{> "button/button" class="button button_type_submit button_enabled" text="Зарегистрироваться" }}
+  </form>
+  <div class="form-section__remark">
+    {{> "link/link" class="form-section__remark-link" href="./login.hbs" text="Войти" }}
+  </div>
+
+</section>

@@ -1,0 +1,45 @@
+---
+title: Страница авторизации
+---
+
+{{!< base}}
+
+<section class="form-section login">
+  <h2 class="form-section__title">Рады вас снова видеть!</h2>
+  <form class="form form_type_login">
+    <fieldset class="form__container">
+      <ul class="form__content list" role="none">
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="login" text="Логин" }}
+          {{> "input/input"
+            class="form__input"
+            type="text"
+            name="login"
+            id="login"
+            placeholder="Логин"
+            required=true
+          }}
+          <span class="form__input-error" id="login-error"></span>
+        </li>
+        <li class="form__item">
+          {{> "label/label" class="form__label" for="password" text="Пароль" }}
+          {{> "input/input"
+            class="form__input"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Пароль"
+            required=true
+          }}
+          <span class="form__input-error" id="password-error"></span>
+        </li>
+      </ul>
+    </fieldset>
+    {{> "button/button" class="button button_type_submit button_enabled" text="Войти" }}
+  </form>
+  <div class="form-section__remark">
+    <p class="form-section__remark-text">Ещё не зарегистрированы?</p>
+    {{> "link/link" class="form-section__remark-link" href="./register.hbs" text="Создать аккаунт" }}
+  </div>
+
+</section>
